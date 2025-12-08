@@ -219,29 +219,34 @@ h1, h2 {
     }
 }
 
-.before-after-container {
+.before-after-section {
     text-align: center;
-    margin: 40px auto;
-    max-width: 800px;
+    margin: 50px auto;
+    max-width: 900px;
 }
 
-.before-after-container h2 {
-    margin-bottom: 20px;
-    font-size: 26px;
+.before-after-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 
-.before-after-wrapper {
+/* Контейнер */
+.before-after-box {
     position: relative;
     width: 100%;
+    border: 4px solid #222;
+    border-radius: 14px;
     overflow: hidden;
-    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
-.before-after-wrapper img {
+/* Фото */
+.before-after-box img {
     width: 100%;
     display: block;
 }
 
+/* Права частина */
 .after-img-wrapper {
     position: absolute;
     top: 0;
@@ -251,7 +256,51 @@ h1, h2 {
     height: 100%;
 }
 
+/* Слайдер */
 .slider {
     width: 100%;
     margin-top: 15px;
+}
+
+/* Підписи */
+.label {
+    position: absolute;
+    top: 12px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    z-index: 10;
+}
+
+.label-before {
+    left: 12px;
+}
+
+.label-after {
+    right: 12px;
+}
+
+/* Анімація плавної появи */
+.before-after-box {
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* АДАПТИВ */
+@media (max-width: 600px) {
+    .before-after-section h2 {
+        font-size: 26px;
+    }
+
+    .label {
+        font-size: 15px;
+        padding: 5px 12px;
+    }
 }
