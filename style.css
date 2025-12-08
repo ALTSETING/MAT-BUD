@@ -325,3 +325,21 @@ h1, h2 {
         height: 180px;
     }
 }
+
+.big-description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    font-weight: 500;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+    .big-description {
+        font-size: 17px;
+    }
+}
