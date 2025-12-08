@@ -168,3 +168,21 @@ h1, h2 {
         font-size: 20px;
     }
 }
+
+.main-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-logo img {
+    width: 220px; /* розмір на ПК */
+    max-width: 80%;
+    height: auto;
+}
+
+/* адаптив на мобілках */
+@media (max-width: 600px) {
+    .main-logo img {
+        width: 160px;
+    }
+}
