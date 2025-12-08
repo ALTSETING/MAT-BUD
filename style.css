@@ -186,3 +186,35 @@ h1, h2 {
         width: 160px;
     }
 }
+
+/* Анімація появи логотипу */
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* застосування до логотипу */
+.main-logo img {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    opacity: 0;             /* логотип спочатку невидимий */
+    animation: logoFadeIn 1.2s ease-out forwards;
+}
+
+/* адаптив */
+@media (max-width: 600px) {
+    .main-logo img {
+        width: 160px;
+    }
+}
