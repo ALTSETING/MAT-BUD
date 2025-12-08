@@ -10,11 +10,12 @@
 
 <header>
     <div class="logo">
-        <!-- ТУТ ВСТАВИШ ЛОГО -->
-        <img src="logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo">
     </div>
 
-    <nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
         <ul>
             <li onclick="openTab('home')">Strona główna</li>
             <li onclick="openTab('yards')">Podwórza</li>
@@ -25,64 +26,53 @@
     </nav>
 </header>
 
-<!-- ===== STRONA GŁÓWNA ===== -->
 <section id="home" class="tab active">
     <h1>Profesjonalne Usługi Brukarskie i Budowlane</h1>
-    <p>Specjalizujemy się w kompleksowej realizacji podwórek, ogrodzeń, tarasów oraz prac budowlanych.</p>
+    <p>Realizujemy podwórza, ogrodzenia, tarasy oraz projekty budowlane na najwyższym poziomie.</p>
 
     <div class="featured-photos">
-        <!-- 6–7 найкращих фото -->
-        <img src="img/top1.jpg" alt="">
-        <img src="img/top2.jpg" alt="">
-        <img src="img/top3.jpg" alt="">
-        <img src="img/top4.jpg" alt="">
-        <img src="img/top5.jpg" alt="">
-        <img src="img/top6.jpg" alt="">
+        <img src="img/top1.jpg">
+        <img src="img/top2.jpg">
+        <img src="img/top3.jpg">
+        <img src="img/top4.jpg">
+        <img src="img/top5.jpg">
+        <img src="img/top6.jpg">
     </div>
 </section>
 
-<!-- ===== PODWÓRZA ===== -->
 <section id="yards" class="tab">
     <h2>Realizacje – Podwórza</h2>
     <div class="gallery">
-        <!-- 50+ FOTO — ДОДАЄШ СВОЇ -->
         <img src="img/yard1.jpg">
         <img src="img/yard2.jpg">
         <img src="img/yard3.jpg">
-        <!-- ...додаєш до 50–100 -->
     </div>
 </section>
 
-<!-- ===== OGRODZENIA ===== -->
 <section id="fences" class="tab">
     <h2>Realizacje – Ogrodzenia</h2>
     <div class="gallery">
         <img src="img/fence1.jpg">
         <img src="img/fence2.jpg">
         <img src="img/fence3.jpg">
-        <!-- ...додаєш фото -->
     </div>
 </section>
 
-<!-- ===== BUDOWA ===== -->
 <section id="construction" class="tab">
     <h2>Realizacje – Budowa</h2>
     <div class="gallery">
         <img src="img/build1.jpg">
         <img src="img/build2.jpg">
         <img src="img/build3.jpg">
-        <!-- ...50+ фото -->
     </div>
 </section>
 
-<!-- ===== TARASY ===== -->
 <section id="terraces" class="tab">
     <h2>Realizacje – Tarasy</h2>
     <div class="gallery">
         <img src="img/terrace1.jpg">
         <img src="img/terrace2.jpg">
         <img src="img/terrace3.jpg">
-        <!-- ...50+ фото -->
     </div>
 </section>
 
