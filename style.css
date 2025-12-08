@@ -1,19 +1,31 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f3f3f3;
+    background: #f4f4f4;
 }
 
+/* HEADER */
 header {
-    background: #222;
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #222;
+    padding: 10px 20px;
+    Position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header img {
-    height: 50px;
+.logo img {
+    height: 45px;
+}
+
+/* BURGER MENU */
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 nav ul {
@@ -23,52 +35,91 @@ nav ul {
 }
 
 nav ul li {
-    color: #fff;
-    cursor: pointer;
+    color: white;
     font-size: 18px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 nav ul li:hover {
-    color: #e3c46e;
+    color: #d4b46f;
 }
 
 .tab {
     display: none;
-    padding: 30px;
+    padding: 25px;
 }
 
 .tab.active {
     display: block;
 }
 
-.featured-photos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 30px;
+h1, h2 {
+    text-align: center;
 }
 
-.featured-photos img {
+/* MAIN GALLERY GRID */
+.featured-photos, .gallery {
+    display: grid;
+    gap: 10px;
+}
+
+.featured-photos img,
+.gallery img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 6px;
     transition: 0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.gallery img:hover, .featured-photos img:hover {
+    transform: scale(1.03);
+}
+
+/* DESKTOP GRID */
+.featured-photos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ADAPTIVE FOR TABLETS */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ADAPTIVE FOR PHONES */
+@media (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background: #222;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .featured-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
