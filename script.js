@@ -10,3 +10,10 @@ function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
+
+const slider = document.getElementById("compareSlider");
+const afterWrapper = document.querySelector(".after-img-wrapper");
+
+slider.addEventListener("input", function () {
+    afterWrapper.style.width = this.value + "%";
+});
