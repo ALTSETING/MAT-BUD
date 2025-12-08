@@ -218,3 +218,40 @@ h1, h2 {
         width: 160px;
     }
 }
+
+.before-after-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.before-after-container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.before-after-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.before-after-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.after-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.slider {
+    width: 100%;
+    margin-top: 15px;
+}
