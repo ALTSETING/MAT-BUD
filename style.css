@@ -309,3 +309,19 @@ h1, h2 {
         padding: 5px 12px;
     }
 }
+
+/* Усі фотографії в галереях однакового розміру */
+.gallery img,
+.featured-photos img {
+    width: 100%;
+    height: 250px;     /* ОДНАКОВА висота для всіх фото */
+    object-fit: cover; /* Акуратне обрізання зайвого */
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .gallery img,
+    .featured-photos img {
+        height: 180px;
+    }
+}
