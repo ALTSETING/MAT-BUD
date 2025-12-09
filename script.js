@@ -42,5 +42,5 @@ function closeLightbox() {
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.getElementById("preloader").classList.add("fade-out");
-    }, 3200); // ← триваліша загрузка (куби + текст + прогрес-бар)
+    }, 3500); // ← триваліша загрузка (куби + текст + прогрес-бар)
 });
