@@ -39,10 +39,8 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-// PRELOADER CONTROL
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.getElementById("preloader").classList.add("fade-out");
-    }, 2800); // <-- тривалість загрузки (можеш збільшити)
+    }, 3200); // ← триваліша загрузка (куби + текст + прогрес-бар)
 });
-
