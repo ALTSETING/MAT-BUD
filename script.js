@@ -44,3 +44,29 @@ window.addEventListener("load", () => {
         document.getElementById("preloader").classList.add("fade-out");
     }, 3500); // ← триваліша загрузка (куби + текст + прогрес-бар)
 });
+
+function generateSparks() {
+    const container = document.getElementById("sparks");
+
+    for (let i = 0; i < 12; i++) {
+        const spark = document.createElement("div");
+        spark.classList.add("spark");
+
+        // Випадкові напрямки розльоту
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 40 + Math.random() * 40;
+
+        spark.style.setProperty("--tx", `${Math.cos(angle) * distance}px`);
+        spark.style.setProperty("--ty", `${Math.sin(angle) * distance}px`);
+
+        container.appendChild(spark);
+
+        // Видалення після анімації
+        setTimeout(() => spark.remove(), 1000);
+    }
+}
+
+/* Запускаємо іскри після складання логотипу */
+setTimeout(() => {
+    generateSparks();
+}, 1700); // Момент, коли "M" складається
