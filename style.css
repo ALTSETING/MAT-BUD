@@ -64,13 +64,6 @@ h1, h2 {
     gap: 10px;
 }
 
-.featured-photos img,
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 0.3s;
-}
 
 .gallery img:hover, .featured-photos img:hover {
     transform: scale(1.03);
@@ -308,16 +301,19 @@ h1, h2 {
         font-size: 15px;
         padding: 5px 12px;
     }
-}
+
 
 /* Усі фотографії в галереях однакового розміру */
 .gallery img,
 .featured-photos img {
     width: 100%;
-    height: 250px;     /* ОДНАКОВА висота для всіх фото */
-    object-fit: cover; /* Акуратне обрізання зайвого */
+    height: 250px;     
+    object-fit: cover; 
     border-radius: 10px;
+    transition: 0.3s;
+    display: block;
 }
+
 
 @media (max-width: 600px) {
     .gallery img,
