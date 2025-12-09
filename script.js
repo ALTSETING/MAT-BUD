@@ -38,3 +38,8 @@ function openLightbox(src) {
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.animation = "fadeOut 0.6s ease forwards";
+});
