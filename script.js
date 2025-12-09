@@ -70,3 +70,17 @@ function generateSparks() {
 setTimeout(() => {
     generateSparks();
 }, 1700); // Момент, коли "M" складається
+
+function acceptCookies() {
+    document.getElementById("cookie-banner").style.display = "none";
+    document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60*60*24*365;
+}
+
+function checkCookies() {
+    if (!document.cookie.includes("cookiesAccepted=true")) {
+        document.getElementById("cookie-banner").style.display = "block";
+    }
+}
+
+checkCookies();
+
