@@ -491,3 +491,34 @@ h1, h2 {
     0% { opacity: 1; }
     100% { opacity: 0; visibility: hidden; }
 }
+
+/* ====== SPARKS EFFECT ====== */
+.sparks-container {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.spark {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #d4b46f; /* золото */
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkFly 0.9s ease-out forwards;
+}
+
+/* Анімація вилітання іскор */
+@keyframes sparkFly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0.3);
+    }
+}
